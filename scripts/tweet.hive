@@ -1,0 +1,45 @@
+CREATE EXTERNAL TABLE tweets(
+id_str string , 
+created_at string , 
+text string , 
+source string , 
+in_reply_to_status_id_str string,
+in_reply_to_user_id_str string,
+in_reply_to_screen_name string,
+`user` struct <
+id_str:string,
+name:string,
+screen_name:string,
+location:string,
+description:string,
+verified:boolean,
+followers_count:int,
+friends_count:int,
+listed_count:int,
+favourites_count:int,
+statuses_count:int,
+created_at:string,
+utc_offset:int,
+time_zone:string,
+geo_enabled:boolean,
+lang:string,
+profile_image_url_https:string >,
+quote_count int,
+reply_count int,
+retweet_count int,
+favorite_count int,
+coordinates struct <
+coordinates: array<int>,
+type: string >,
+timestamp_ms string,
+retweeted_status struct <
+id_str:string>
+)
+ROW FORMAT SERDE 
+  'org.apache.hive.hcatalog.data.JsonSerDe' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  '/temp/flume/twitterstream';

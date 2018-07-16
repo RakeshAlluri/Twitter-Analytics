@@ -1,0 +1,45 @@
+#highlightsContainer{
+	width: 550px; 
+	margin: 20px auto
+}
+
+#highlights{
+	width: 550px; 
+	height: 80px
+}
+
+#phrases{
+	color:#212121;
+	display:inline; 
+	float: left;
+	margin: 0 0;
+	font-size:14px; 
+	font-weight:bolder; 
+	text-transform: lowercase;
+	font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif; 
+	text-align: left;
+}
+
+#count{
+	color:#212121; 
+	display:inline;
+	float: right;
+	margin: 0 0;
+	font-size:14px; 
+	font-weight:bolder; 
+	text-transform:lowercase;
+	font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif; 
+	text-align: right;
+}
+
+#text{
+	style="color:#212121; 
+	width:550px;margin:0 0;
+	padding-top: 5px; 
+	overflow-wrap: break-word;
+	display:inline-block;
+	font-size:14px; 
+	font-weight:normal; 
+	text-transform:lowercase;
+	font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
